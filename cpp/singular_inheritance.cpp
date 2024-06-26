@@ -1,3 +1,5 @@
+//if we make the derived class private then the 
+//members of the base class will become private for the derived class. 
 #include<iostream>
 using namespace std;
 class base
@@ -45,8 +47,8 @@ int main()
 {
     base obj;
     derived object;
-    obj.setData();
-    //object.display();
+    object.setData();//object of the derived class will not be 
+                     //able to access the member of the base class after declaring the 
     object.process();
     object.display();
 return 0;
