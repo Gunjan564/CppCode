@@ -31,7 +31,6 @@ public:
     void process();  
     void display();  
 };
-
 void derived::process(void)
 {
     data3=data2*getData1();
