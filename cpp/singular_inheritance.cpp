@@ -34,15 +34,21 @@ public:
 
 void derived::process(void)
 {
-
+    data3=data2*getData1();
 }
-
-derived::~derived()
+void derived::display(void)
 {
+    cout<<"The value of data number 1: "<<getData1()<<endl;
+    cout<<"The value of data number 2: "<<data2<<endl;
+    cout<<"The value of data number 3: "<<data3<<endl;
 }
-
 int main()
 {
-    
+    base obj;
+    derived object;
+    obj.setData();
+    //object.display();
+    object.process();
+    object.display();
 return 0;
 }
