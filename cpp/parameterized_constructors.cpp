@@ -8,11 +8,14 @@ class parameter
     public:
     parameter(int a,int b)
     {
-        cout<<"a + b = "<<a+b;
+        cout<<"a + b = "<<a+b<<endl;
+    }
+    void hello()
+    {
+        cout<<"hello";
     }
 };
 int main() {
-    
     parameter(4,5);
     parameter two(4,5);//parameterized constructors
     

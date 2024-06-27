@@ -1,5 +1,6 @@
-//Default Constructor is necessary when an object is made
-//But if the constructor is call individually, then there is no need of default constructor
+//Default Constructor is necessary when an empty object is made and there is a parameterizwd constructor already exists
+//But if the constructor is called individually, then there is no need of default constructor
+//if the object is made with passing arguments simultaneously then there is no need of default constructor
 #include <iostream>
 #include<math.h>
 using namespace std;
