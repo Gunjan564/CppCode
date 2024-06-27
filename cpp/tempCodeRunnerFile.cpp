@@ -1,1 +1,3 @@
-int count=0; 
+:public marks
+{
+    public:
