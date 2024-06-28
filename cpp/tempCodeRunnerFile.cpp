@@ -1,2 +1,6 @@
-BankDeposit(10000,2,4,1);
-    // obj1=BankDeposit(4);
+complex object;
+    // complex *ptr=&object;
+    // (*ptr).setdata(1,2);
+    // (*ptr).getdata();
+    // ptr->setdata(3,4);
+    // ptr->getdata();
