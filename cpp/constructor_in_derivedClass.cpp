@@ -5,6 +5,11 @@ class base1
 protected: 
     int basedata1;
 public:
+    
+    //     base1(){
+    //     cout<<"default constructor of base 1 is called"<<endl;
+    
+    // };
     base1(int a)
     {
         basedata1=a;
@@ -20,6 +25,9 @@ class base2
 protected: 
     int basedata2;
 public:
+    // base2(){
+    //     cout<<"default constructor of base 2 is called"<<endl;
+    // };
     base2(int a)
     {
         basedata2=a;
