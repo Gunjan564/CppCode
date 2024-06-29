@@ -18,6 +18,7 @@ using namespace std;
          cout<<"Student's colour: "<<colour<<endl;
       };
    };   
+   
    int main()
    {
       data students[4];
