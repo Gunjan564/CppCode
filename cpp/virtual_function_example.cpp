@@ -13,13 +13,14 @@ public:
     }
     YTchannel()
     {
-        
+              
     }
     virtual void display()
     {
         cout<<"channel Name: "<<channel_name<<endl;
         cout<<"channel Ratings(out of 10): "<<channel_rating<<endl;
     }
+    virtual void purevirtualfunction()=0;
 };
 class video:public YTchannel
 {
@@ -33,10 +34,14 @@ public:
         video_title=s;
         video_rating=r;
     }
-    void virtual display()
+    void display()
     {
         cout<<"Video Title: "<<video_title<<endl;
         cout<<"Video Ratings(out of 10): "<<video_rating<<endl;
+    }
+    void purevirtualfunction()
+    {
+        cout<<"Pure virtual function";
     }
 };
 class shorts:public YTchannel
@@ -45,7 +50,7 @@ protected:
     string shorts_title;
     int views;
 public:
-    shorts(string s,int r):YTchannel(s,r)
+    shorts(string s,int r , string sb, int rb):YTchannel(sb, rb)
     {
         shorts_title=s;
         views=r;
@@ -54,6 +59,10 @@ public:
     {
         cout<<"Shorts Title: "<<shorts_title<<endl;
         cout<<"Views: "<<views<<endl;
+    }
+    void purevirtualfunction()
+    {
+        cout<<"Pure virtual function";
     }
 };
 int main()
@@ -66,7 +75,7 @@ int main()
     ptr->display();
     info.display();
     YTchannel *pointer;
-    YTchannel object("Random Channel ",9);
+    //YTchannel object("Random Channel ",9);//we cannot create an object of abstract class
     pointer =&info;
     pointer->display ();
     //-----This won't work-----//
@@ -75,5 +84,11 @@ int main()
     video *point;
     point =&obj;
     */
+   shorts  shortptr("First short",7,"Random shortsChannel ",9);
+   YTchannel *pinpoint[2];
+    pinpoint[0]=&info;
+    pinpoint[1]=&shortptr;
+    pinpoint[1]->display();
+    pinpoint[1]->purevirtualfunction();  
 return 0;
 }
