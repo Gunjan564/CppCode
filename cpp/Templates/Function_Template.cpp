@@ -11,6 +11,6 @@ T3 Func_Difference(T1 a,T2 b){
 int main()
 {
     cout<<Func_average<char>(2,3)<<endl;
-    cout<<Func_Difference<int ,int,float>(4,5);
+    cout<<Func_Difference<int ,int,float>(4.5,5.2);
 return 0;
 }
