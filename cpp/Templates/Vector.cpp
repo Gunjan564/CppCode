@@ -48,6 +48,7 @@ int main()
     cout<<endl;
     vector<char> vec3(vec2);
     display(vec3);
+    cout<<endl;
     vector<int> vec4(6,3);
     display(vec4);
 return 0;
