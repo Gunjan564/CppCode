@@ -9,6 +9,7 @@
         "fstream": "cpp",
         "type_traits": "cpp",
         "cmath": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "map": "cpp"
     }
 }
