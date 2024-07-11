@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+
 template <class T1 =int,class T2 =float, class T3=char>
 class display  
 {
@@ -14,6 +15,7 @@ public:
         cout<<"c = "<<c<<endl<<endl;
     }
 };
+
 int main()
 {
     display <int , float, char>obj(2,1.3,'a');
