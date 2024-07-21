@@ -1,87 +1,36 @@
 #include<iostream>
+#include <string>
+#include <algorithm>
 using namespace std;
+class Solution {
+public:
+    bool isPalindrome(string s) {
+        string new_s;
+        string reversed_s;
 
-//{ Driver Code Starts
-#include <bits/stdc++.h>
-using namespace std;
+        for (int i = 0, j = 0; i < s.size(); i++) {
+            if ((s[i] >= 65 && s[i] <= 90)) {
 
-// } Driver Code Ends
-// class Solution {
-//   public:
-    void lcmAndGcd(long long A , long long B) {
-        // code here
-        vector<long long> vec;
-        long long factor,lcm,Gcd,a=A,b=B;
-        
-        if(A>B){
-            long long divisor=0;
-            for(;a%b!=0;){
-            divisor=a%b;
-            a=b;
-            b=divisor;
+                new_s.push_back(s[i]+32);
+                
             }
-            Gcd=b;
+                else if (s[i] >= 97 && s[i] <= 122) {
+                    new_s.push_back(s[i]);
+                    
+                }
+            
         }
-        else if(b>a){
-            long long divisor=0;
-            for(;b%a!=0;){
-            divisor=b%a;
-            b=a;
-            b=divisor;
-            }
-            Gcd=a;
-        }
-        lcm=(A*B)/Gcd;
-        vec[0]=lcm;
-        vec[1]=Gcd;
-        cout<<vec[0]<<"A"<<vec[1];
-     }
-// };
-
-//{ Driver Code Starts.
-int main() {
-    int t;
-    cin >> t;
-    //while (t--) {
-        // long long A,B;
-
-        // cin>>A>>B;
-
-        // Solution ob;
-        //vector<long long> ans = ob.lcmAndGcd(A,B);
-        lcmAndGcd(10,5);
-        //cout<<ans[0]<<" "<<ans[1]<<endl;
-    //}
-    return 0;
+        reverse(new_s.begin(), new_s.end());
+        cout<<new_s<<endl<<reversed_s;
+        if (new_s == reversed_s)
+            return true;
+        else
+            return false;
+    }
+};
+int main()
+{
+    Solution palindrome;
+    palindrome.isPalindrome("A man, a plan, a canal: Panama");
+return 0;
 }
-// } Driver Code Ends
-// #include<iostream>
-// using namespace std;
-// int main()
-// {
-//     int a=56,b=17,vec[2],A=a,B=b;
-// int factor,lcm,Gcd;
-//         if(A>B){
-//             long long divisor=0;
-//             for(;A%B!=0;){
-//             divisor=A%B;
-//             A=B;
-//             B=divisor;
-//             }
-//             Gcd=B;
-//         }
-//         else if(B>A){
-//             long long divisor=0;
-//             for(;B%A!=0;){
-//             divisor=B%A;
-//             B=A;
-//             B=divisor;
-//             }
-//             Gcd=A;
-//         }
-//         lcm=(a*b)/Gcd;
-//         vec[0]=lcm;
-//         vec[1]=Gcd;
-//         cout<<vec[0]<<" "<<vec[1];
-// return 0;
-// }
