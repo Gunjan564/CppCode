@@ -5,9 +5,9 @@ class X
 {
 private:
     int val1;
+public:
     friend void swap(X &a, Y &b);
     friend void display(X a,Y b);
-public:
     void set(int a)
     {
         val1 = a;
@@ -17,9 +17,9 @@ class Y
 {
 private:
     int val2;
+public:
     friend void swap(X &a, Y &b);
     friend void display(X a,Y b);
-public:
     void set(int b)
     {
         val2 = b;

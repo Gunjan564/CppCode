@@ -1,38 +1,57 @@
-#include <iostream>
-#include <string>
-#include <algorithm>
-using namespace std;
-class Solution
-{
-public:
-    bool isPalindrome(string s)
-    {
-        string new_s;
-        string reversed_s;
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int t;
+//     cin>>t;
+//     while(t>=1)
+//     {
+//         int rem=0;
+//         int x;
+//         cin>>x;
+//         int y;
+//         cin>>y;
+//         if(x>y/2)
+//         {
+//             rem=y%x;
+//         }
+//         else if(x<=y/2)
+//         {
+//             rem=y%((y/2)+1);
+//         }
+//         cout<<rem;
+//     }
+// return 0;
+// }
+// #include<bits/stdc++.h>
+// using namespace std;
 
-        for (int i = 0, j = 0; i < s.size(); i++)
-        {
-            if ((s[i] >= 65 && s[i] <= 90))
-            {
-                new_s.push_back(s[i] + 32);
-            }
-            else if (s[i] >= 97 && s[i] <= 122)
-            {
-                new_s.push_back(s[i]);
-            }
-        }
-        reverse(new_s.begin(), new_s.end());
-        cout << new_s << endl
-             << reversed_s;
-        if (new_s == reversed_s)
-            return true;
-        else
-            return false;
+int gcd(int x,int y){
+    int a = max(x,y);
+    int b = min(x,y);
+    int remainder;
+    while(a%b != 0){
+        remainder = a%b;
+        a = b;
+        b = remainder; // b is answer
     }
-};
-int main()
-{
-    Solution palindrome;
-    palindrome.isPalindrome("class 23 , class 27: hi");
-    return 0;
+    return b;
 }
+
+int main(){
+    int testCases;
+    cin >> testCases;
+    while(testCases--){
+        int x,y;
+        cin >> x >> y;
+        int diff = abs(x-y);
+        int step;
+        if(diff == 0) cout << 0 <<" "<< 0 << endl;
+        else{
+            int step1 = x % diff;         
+            int step2 = diff - step1;
+            cout << diff << " " << min(step1, step2) << endl;
+        }
+    }
+}
+

@@ -50,5 +50,6 @@ int main()
     base_ptr->set_var_base(87);
     //base_ptr->set_var_derived(43);throwing error
     base_ptr->display();//will invoke derived class display function because display function of base class is virtually invoked
+    base_ptr->Base::display();//will invoke Base class display function
 return 0;
 }
