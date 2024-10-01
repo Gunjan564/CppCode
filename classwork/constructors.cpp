@@ -10,7 +10,7 @@ public:
         cout<<"Enter a number: ";
         cin>>value;
         cout<<endl;
-    }
+    }~prime(){}
     void prime_number()
     {
         int count=0;

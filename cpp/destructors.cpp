@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-      int count=0; 
+int count=0; 
 class Number
 {
    private: 
