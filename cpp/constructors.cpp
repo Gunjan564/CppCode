@@ -11,9 +11,10 @@ private:
     int a, b;
 
 public:
-    hello(void)//----Default Constructor = Do not accepts parameters
+    hello()//----Default Constructor = Do not accepts parameters
     {
         a = 1, b = 2;
+        cout<<"constructor is invoked"<<endl;
     }
     void print(void)
     {
@@ -24,7 +25,7 @@ public:
 int main()
 {
     hello call;
-    call.print();
+    //call.print();
     
     return 0;
 }

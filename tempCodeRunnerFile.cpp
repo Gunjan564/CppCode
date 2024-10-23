@@ -1,28 +1,69 @@
-#include<iostream>
+//{ Driver Code Starts
+// Initial Template for C++
+#include <bits/stdc++.h>
 using namespace std;
-class student
+
+// } Driver Code Ends
+// User function Template for C++
+
+class Solution
 {
-private: 
-    int roll=10;
 public:
-    int phno=9;
-    
-    void display(int a)
+    string postToInfix(string exp)
     {
-        cout<<a<<endl<<"single"<<endl;
-        
-    }
-    void display(int a,int b)
-    {
-        cout<<a<<endl<<b<<endl<<"double"<<endl;
-        
+        int i = 0;
+        stack<string> st;
+        while (i < exp.size())
+        {
+            char c = exp[i];
+            if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z' || c >= '0' && c <= '9'){
+                st.push(string(1, c));
+            }
+            else if (c == '('){
+                st.push(")");
+            }
+            else if (c == ')'){
+                st.push("(");
+            }
+            else{
+                string right = st.top();
+                st.pop();
+                string left = st.top();
+                st.pop();
+                stringstream temp;
+                temp << "(" << left << c << right << ")";
+                st.push(temp.str());
+            }
+            i++;
+        }
+        return st.top();
     }
 };
+
+//{ Driver Code Starts.
+
 int main()
 {
-    student obj;
-    // cout<<obj.phno<<endl;
-    obj.display(89);
-    obj.display(90,110);
-return 0;
+    int t = 1;
+    cin >> t;
+
+    // freopen ("output_gfg.txt", "w", stdout);
+
+    while (t--)
+    {
+        // Input
+        string postfix;
+        cin >> postfix;
+        // char marker; cin >> marker;
+
+        Solution obj;
+        cout << obj.postToInfix(postfix) << endl;
+
+        // cout << "~\n";
+    }
+    fclose(stdout);
+
+    return 0;
 }
+
+// } Driver Code Ends

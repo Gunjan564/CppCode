@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-class student
+class student//BASE CLASS
 {
 private: 
 public:
@@ -10,7 +10,7 @@ public:
         Roll_Number=id;
     }
 };
-class marks:public student
+class marks:public student //INTERMIDIATE BASE CLASS by student
 {
     public: 
     int maths,physics;
@@ -20,7 +20,7 @@ class marks:public student
         physics=m2;
     }
 };
-class result:public marks
+class result:public marks // derived class
 {
     public:
     void display_Result(void){
