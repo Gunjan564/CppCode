@@ -25,7 +25,7 @@ public:
 int main()
 {
     hello call;
-    //call.print();
+    call.print();
     
     return 0;
 }

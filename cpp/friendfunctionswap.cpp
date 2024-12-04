@@ -7,7 +7,7 @@ private:
     int val1;
 public:
     friend void swap(X &a, Y &b);
-    friend void display(X a,Y b);
+    void display(X a,Y b);
     void set(int a)
     {
         val1 = a;
@@ -32,11 +32,11 @@ void swap(X &a, Y &b)
     a.val1 = b.val2;
     b.val2 = temp;
 }
-void display(X a,Y b)
-{
-    cout << "a = " << a.val1 << endl;
-    cout << "b = " << b.val2 << endl;
-}
+// void display(X a,Y b)
+// {
+//     cout << "a = " << a.val1 << endl;
+//     cout << "b = " << b.val2 << endl;
+// }
 int main()
 {
     X first;

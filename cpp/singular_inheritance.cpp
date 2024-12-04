@@ -2,7 +2,7 @@
 //members of the base class will become private for the derived class. 
 #include<iostream>
 using namespace std;
-class base
+class base//++++++++++++++++++++++++++++++++++++++++
 {
 private: 
     int data1;
@@ -25,7 +25,7 @@ int base:: getData2()
 {
     return data2;
 }
-class derived:public base
+class derived:public base//++++++++++++++++++++++++++++++
 {
 private:
     int data3;

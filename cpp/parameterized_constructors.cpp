@@ -6,7 +6,10 @@ class parameter
     private:
     int a,b;
     public:
-    parameter(int b,int a=0)
+    parameter(){
+        cout<<"default"<<endl;
+    }
+    parameter(int b,int a = 0)
     {
         cout<<"a + b = "<<a+b<<endl;
     }
@@ -14,16 +17,16 @@ class parameter
     {
         cout<<"hello";
     }
-    void hello(parameter kite)
-    {
-        kite.hello1();
-        cout<<"hello"<<endl;
-    }
+    // void hello(parameter kite)
+    // {
+    //     kite.hello1();
+    //     cout<<"hello"<<endl;
+    // }
 };
 
 int main() {
-    parameter two(4,5);//parameterized constructors
-    parameter(5);
+    parameter two;//parameterized constructors
+    // parameter();
 
     return 0;
 }

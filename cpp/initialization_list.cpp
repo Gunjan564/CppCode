@@ -6,7 +6,7 @@ private:
 int a;
 int b;
 public:
-    Test(int i,int j):a(i),b(j)
+    Test(int i,int j):b(j),a(i)
     //Test(int i,int j):a(i+2),b(2+j)
     // Test(int i,int j):a(5),b(6)
     // Test(int i,int j):a(i),b(a+j)

@@ -6,10 +6,9 @@ protected:
     int basedata1;
 public:
     
-    //     base1(){
-    //     cout<<"default constructor of base 1 is called"<<endl;
-    
-    // };
+    base1(){
+        cout<<"default constructor of base 1 is called"<<endl;    
+    };
     base1(int a)
     {
         basedata1=a;
@@ -25,9 +24,9 @@ class base2
 protected: 
     int basedata2;
 public:
-    // base2(){
-    //     cout<<"default constructor of base 2 is called"<<endl;
-    // };
+    base2(){
+        cout<<"default constructor of base 2 is called"<<endl;
+    };
     base2(int a)
     {
         basedata2=a;
@@ -43,7 +42,7 @@ class derived: public base1,public base2
     protected:
     int derived_int;
     public:
-    derived(int a):base1(1),base2(2)
+    derived(int a)//:base1(1),base2(2)
     {
         derived_int=a;
         cout<<"derived class constructor is called"<<endl;
