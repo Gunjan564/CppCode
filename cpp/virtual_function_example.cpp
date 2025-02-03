@@ -3,6 +3,10 @@ using namespace std;
 class YTchannel
 {
 protected: 
+
+
+
+
     string channel_name;
     int channel_rating;
 public:
@@ -11,11 +15,8 @@ public:
         channel_name=sb;
         channel_rating=rb;
     }
-    YTchannel()
-    {
-              
-    }
-    virtual void display()
+    YTchannel(){}
+    void display()
     {
         cout<<"channel Name: "<<channel_name<<endl;
         cout<<"channel Ratings(out of 10): "<<channel_rating<<endl;
@@ -71,7 +72,6 @@ int main()
     video info("First video",8,"Random Channel ",9);
     video *ptr;
     ptr = &info;
-    ptr->display();
     ptr->display();
     info.display();
     YTchannel *pointer;

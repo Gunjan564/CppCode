@@ -2,7 +2,7 @@
 using namespace std;
 
 class base 
- { 
+{ 
 protected:
 string protect={"protect"};
 
