@@ -2,11 +2,7 @@
 using namespace std;
 class YTchannel
 {
-protected: 
-
-
-
-
+protected:
     string channel_name;
     int channel_rating;
 public:
